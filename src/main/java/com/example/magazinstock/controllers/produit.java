@@ -30,4 +30,9 @@ public class produit {
     public Produit retrieveProduit(Long id){
         return iproduitService.retrieveProduit(id);
     }
+    @PostMapping("/{idProduit}/{idStock}")
+    public void assignProduitToStock(@PathVariable Long idProduit,@PathVariable Long idStock){
+        iproduitService.assignProduitToStock(idProduit,idStock);
+    }
+
 }
